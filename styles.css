@@ -314,7 +314,7 @@ img {
 
 /* Hero Area */
 .hero,
-.glide__slides,
+.glide__hero,
 .banner {
   position: relative;
   height: 100vh;
@@ -434,7 +434,7 @@ img {
 
 @media only screen and (max-width: 1260px) {
   .hero,
-  .glide__slides,
+  .glide__hero,
   .banner {
     height: 90vh;
   }
@@ -1000,6 +1000,12 @@ span.dot::before {
     grid-row-start: 15;
     grid-row-end: 19;
   }
+}
+
+.brands li img {
+  width: 100%;
+  object-fit: contain;
+  height: 12rem;
 }
 
 /* ========= Facility ========== */
