@@ -80,7 +80,8 @@ if (catContainer) {
 
 const productCenter = document.querySelector(".product__center");
 const latestCenter = document.querySelector(".latest__center");
-const relatedCenter = document.querySelector(".related__center");
+const recentCenter = document.querySelector(".recent__center");
+const shopCenter = document.querySelector(".shop__center");
 
 const filterArray = async type => {
   const products = await getProducts();
@@ -88,12 +89,12 @@ const filterArray = async type => {
 };
 
 window.addEventListener("DOMContentLoaded", async () => {
+  const products = await getProducts();
   const defaultProducts = await filterArray("trend");
   const latestProducts = await filterArray("latest");
-  const relatedProducts = await filterArray("related");
+  const recentProducts = await filterArray("recent");
   displayProducts(defaultProducts, productCenter);
   displayProducts(latestProducts, latestCenter);
-  displayProducts(relatedProducts, relatedCenter);
+  displayProducts(recentProducts, recentCenter);
+  displayProducts(products, shopCenter);
 });
-
-// Latest
