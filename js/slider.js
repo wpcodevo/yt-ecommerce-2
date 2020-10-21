@@ -18,7 +18,7 @@ if (glide2)
     type: "carousel",
     startAt: 0,
     perView: 5,
-    rewin: false,
+    hoverpause: false,
     autoplay: 2000,
     animationDuration: 800,
     animationTimingFunc: "cubic-bezier(0.165, 0.840, 0.440, 1.000)",
