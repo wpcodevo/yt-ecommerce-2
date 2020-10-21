@@ -23,14 +23,40 @@ closeBtn.addEventListener("click", () => {
 
 // Fixed Nav
 const navBar = document.querySelector(".navigation");
+const navHeight = navBar.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
   const scrollHeight = window.pageYOffset;
-  const navHeight = navBar.getBoundingClientRect().height;
   if (scrollHeight > navHeight) {
     navBar.classList.add("fix__nav");
   } else {
     navBar.classList.remove("fix__nav");
   }
+});
+
+// Scroll To
+const links = [...document.querySelectorAll(".scroll-link")];
+links.map(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+
+    const id = e.target.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+    const fixNav = navBar.classList.contains("fix__nav");
+    let position = element.offsetTop - navHeight;
+
+    if (!fixNav) {
+      position = position - navHeight;
+    }
+
+    window.scrollTo({
+      top: position,
+      left: 0,
+    });
+
+    navigation.classList.remove("show");
+    nav.classList.remove("show");
+    document.body.classList.remove("show");
+  });
 });
 
 // preloader

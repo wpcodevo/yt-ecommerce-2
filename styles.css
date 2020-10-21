@@ -1008,7 +1008,14 @@ span.dot::before {
   height: 12rem;
 }
 
+@media only screen and (max-width: 567px) {
+  .brands li img {
+    height: 9rem;
+  }
+}
+
 /* News */
+
 .news {
   padding-bottom: 8rem;
 }
@@ -1066,6 +1073,28 @@ span.dot::before {
   border: 1px solid var(--black);
   color: var(--white);
   background-color: var(--black);
+}
+
+@media only screen and (max-width: 567px) {
+  .new__card {
+    width: 100%;
+  }
+  .card__footer h3 {
+    font-size: 1.8rem;
+  }
+
+  .card__footer span {
+    font-size: 1.2rem;
+  }
+
+  .card__footer p {
+    font-size: 1.2rem;
+  }
+
+  .card__footer a button,
+  .card__footer a button {
+    padding: 1rem 3rem;
+  }
 }
 
 /* ========= Facility ========== */
@@ -1374,6 +1403,46 @@ Facility Media Query
     right: 1rem;
     padding: 1.3rem;
   }
+}
+
+/* Goto Top */
+.goto-top:link,
+.goto-top:visited {
+  position: fixed;
+  right: 2%;
+  bottom: 10%;
+  padding: 0.8rem 1.4rem;
+  border-radius: 1rem;
+  background-color: var(--pink);
+  color: var(--white);
+  visibility: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.show:link,
+.show:visited {
+  visibility: visible;
+  z-index: 1999;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  0% {
+    transform: scale(1);
+  }
+}
+
+.goto-top:hover {
+  background-color: var(--black);
 }
 
 /* ========= Footer ======== */
