@@ -1008,6 +1008,66 @@ span.dot::before {
   height: 12rem;
 }
 
+/* News */
+.news {
+  padding-bottom: 8rem;
+}
+
+.new__card {
+  background-color: var(--grey-alt);
+  width: 95%;
+  margin: 0 auto;
+}
+
+.new__card:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.card__footer {
+  padding: 1rem;
+}
+
+.card__footer h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.card__footer span {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--black2);
+}
+
+.card__footer p {
+  font-size: 1.4rem;
+  color: var(--black2);
+  margin-bottom: 1.6rem;
+  line-height: 2.7rem;
+}
+
+.card__footer a button,
+.card__footer a button {
+  display: inline-block;
+  padding: 1.2rem 3.7rem;
+  border: 1px solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card__footer a button:focus {
+  outline: none;
+}
+
+.card__footer a button:hover {
+  border: 1px solid var(--black);
+  color: var(--white);
+  background-color: var(--black);
+}
+
 /* ========= Facility ========== */
 
 .facility__section {
