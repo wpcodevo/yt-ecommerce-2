@@ -62,7 +62,9 @@ links.map(link => {
 // preloader
 window.addEventListener("load", () => {
   const loader = document.getElementById("pre-loader");
-  loader.classList.add("hide");
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 2000);
 });
 
 // PopUp
@@ -77,5 +79,5 @@ closePopup.addEventListener("click", () => {
 window.addEventListener("load", () => {
   setTimeout(() => {
     popup.classList.add("show");
-  }, 3000);
+  }, 5000);
 });
