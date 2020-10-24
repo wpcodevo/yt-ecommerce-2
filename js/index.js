@@ -1,5 +1,5 @@
 // Nav
-const nav = document.querySelector(".nav__menu");
+const nav = document.querySelector(".nav-menu");
 const navigation = document.querySelector(".navigation");
 const openBtn = document.querySelector(".hamburger");
 const closeBtn = document.querySelector(".close");
@@ -27,9 +27,9 @@ const navHeight = navBar.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
   const scrollHeight = window.pageYOffset;
   if (scrollHeight > navHeight) {
-    navBar.classList.add("fix__nav");
+    navBar.classList.add("fix-nav");
   } else {
-    navBar.classList.remove("fix__nav");
+    navBar.classList.remove("fix-nav");
   }
 });
 
@@ -41,7 +41,7 @@ links.map(link => {
 
     const id = e.target.getAttribute("href").slice(1);
     const element = document.getElementById(id);
-    const fixNav = navBar.classList.contains("fix__nav");
+    const fixNav = navBar.classList.contains("fix-nav");
     let position = element.offsetTop - navHeight;
 
     if (!fixNav) {
@@ -68,9 +68,8 @@ window.addEventListener("load", () => {
 });
 
 // PopUp
-
 const popup = document.querySelector(".popup");
-const closePopup = document.querySelector(".popup__close");
+const closePopup = document.querySelector(".popup-close");
 
 closePopup.addEventListener("click", () => {
   popup.classList.remove("show");

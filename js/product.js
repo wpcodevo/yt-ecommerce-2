@@ -9,10 +9,10 @@ const getProducts = async () => {
 const displayProducts = (products, center) => {
   let display = products.map(
     ({ title, image, price }) => `<div class="product">
-          <div class="product__header">
+          <div class="product-header">
             <img src=${image} alt="product">
           </div>
-          <div class="product__footer">
+          <div class="product-footer">
             <h3>${title}</h3>
             <div class="rating">
               <i class="fas fa-star"></i>
@@ -21,7 +21,7 @@ const displayProducts = (products, center) => {
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
             </div>
-            <div class="product__price">
+            <div class="product-price">
               <h4>$${price}</h4>
             </div>
           </div>
@@ -55,7 +55,7 @@ const filterBtns = [...document.querySelectorAll(".filter-btn")];
 
 if (catContainer) {
   catContainer.addEventListener("click", async e => {
-    const target = e.target.closest(".section__title");
+    const target = e.target.closest(".section-title");
     if (!target) return;
     const id = target.dataset.id;
     const products = await getProducts();
@@ -78,10 +78,10 @@ if (catContainer) {
   });
 }
 
-const productCenter = document.querySelector(".product__center");
-const latestCenter = document.querySelector(".latest__center");
-const recentCenter = document.querySelector(".recent__center");
-const shopCenter = document.querySelector(".shop__center");
+const productCenter = document.querySelector(".product-center");
+const latestCenter = document.querySelector(".latest-center");
+const recentCenter = document.querySelector(".recent-center");
+const shopCenter = document.querySelector(".shop-center");
 
 const filterArray = async type => {
   const products = await getProducts();
