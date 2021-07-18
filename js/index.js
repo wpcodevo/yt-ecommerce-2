@@ -4,21 +4,16 @@ const navigation = document.querySelector(".navigation");
 const openBtn = document.querySelector(".hamburger");
 const closeBtn = document.querySelector(".close");
 
-const navLeft = nav.getBoundingClientRect().left;
 openBtn.addEventListener("click", () => {
-  if (navLeft < 0) {
-    navigation.classList.add("show");
-    nav.classList.add("show");
-    document.body.classList.add("show");
-  }
+  navigation.classList.add("show");
+  nav.classList.add("show");
+  document.body.classList.add("show");
 });
 
 closeBtn.addEventListener("click", () => {
-  if (navLeft < 0) {
-    navigation.classList.remove("show");
-    nav.classList.remove("show");
-    document.body.classList.remove("show");
-  }
+  navigation.classList.remove("show");
+  nav.classList.remove("show");
+  document.body.classList.remove("show");
 });
 
 // Fixed Nav
@@ -35,8 +30,8 @@ window.addEventListener("scroll", () => {
 
 // Scroll To
 const links = [...document.querySelectorAll(".scroll-link")];
-links.map(link => {
-  link.addEventListener("click", e => {
+links.map((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
     const id = e.target.getAttribute("href").slice(1);
